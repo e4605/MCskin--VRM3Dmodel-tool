@@ -1,14 +1,18 @@
-# MC Skin → VRM 1.1
+# MC Skin → VRM 1.1.1
 
 把 Minecraft 皮肤转换为带骨骼的 VRM 0.x 模型，同时输出可编辑的 Blender 工程。支持 Windows x64，需要本机安装 Blender 5.2。
 
 ## 下载
 
-- **[下载 Windows 完整工具包](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.0-Windows-x64.zip)**
-- [下载完整源码](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.0-Source.zip)
+- **[下载 Windows 完整工具包](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.1-Windows-x64.zip)**
+- [下载完整源码](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.1-Source.zip)
 - [SHA-256 校验文件](SHA256SUMS.txt)
 
 完整解压 Windows 工具包后，运行 `MCSkinVRM.exe`。必须保留同目录的 `_internal` 文件夹。请使用上面的完整包下载链接；单独的 EXE 缺少运行依赖。
+
+## 1.1.1 修复
+
+修复所选输出目录被 Windows 拒绝访问时转换无法开始的问题。默认使用当前用户的推荐导出目录；所选目录无法创建或写入时，界面会尝试其他可写目录并显示实际保存位置。新增“推荐目录”按钮。
 
 ## 快速使用
 
