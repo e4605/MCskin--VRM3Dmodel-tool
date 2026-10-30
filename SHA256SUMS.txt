@@ -1,0 +1,2 @@
+c8a78f1fc4ccc83dfbddc24ebca076bed6a81fb388d94f7a72de3f517f614bb9  MCSkinVRM-v1.1.0-Source.zip
+1f654dff7b5b28ae097580065ffdfc65cb3669600be1bcecff060225add0c353  MCSkinVRM-v1.1.0-Windows-x64.zip
