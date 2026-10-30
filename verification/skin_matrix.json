@@ -1,0 +1,30 @@
+[
+  {
+    "case": "classic",
+    "vertices": 6532,
+    "triangles": 3266,
+    "roundtrip": true,
+    "texture_pixels_verified": true
+  },
+  {
+    "case": "legacy",
+    "vertices": 6528,
+    "triangles": 3264,
+    "roundtrip": true,
+    "texture_pixels_verified": true
+  },
+  {
+    "case": "hd",
+    "vertices": 26128,
+    "triangles": 13064,
+    "roundtrip": true,
+    "texture_pixels_verified": true
+  },
+  {
+    "case": "hd256",
+    "vertices": 104512,
+    "triangles": 52256,
+    "roundtrip": true,
+    "texture_pixels_verified": true
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "vrm_version": "0.0",
+  "humanoid_mappings": 51,
+  "finger_mapping_check": true,
+  "vertices": 7640,
+  "triangles": 3820,
+  "mesh_count": 15,
+  "shape_keys": [
+    "Angry",
+    "Blink",
+    "Blink_L",
+    "Blink_R",
+    "Fun",
+    "Joy",
+    "LookDown",
+    "LookLeft",
+    "LookRight",
+    "LookUp",
+    "Sorrow"
+  ],
+  "no_added_mouth": true,
+  "texture_pixels_verified": true,
+  "max_weight_error": 2.9802322387695312e-08,
+  "sha256": "b4a9376636a39a2c7c9e649317597086873dc5fe1e792ebe415ced25416d6554",
+  "target_application_test": "未执行面捕软件实机加载或推流；此项是结构兼容检查。",
+  "roundtrip_import": true,
+  "converter_version": "1.1.0",
+  "name": "UI_v1_1",
+  "skin": {
+    "model": "slim",
+    "scale": 1,
+    "legacy": false,
+    "size": [
+      64,
+      64
+    ],
+    "notes": [
+      "手臂自动识别仅为推断；外观异常时请手动切换。"
+    ]
+  },
+  "height_m": 1.8,
+  "preview_files": [
+    "preview.png"
+  ],
+  "outputs": [
+    "Avatar.vrm",
+    "Avatar.blend",
+    "prepared_skin.png",
+    "texture.png",
+    "report.json"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "output": "D:\\software\\blender-5.2.3-windows-x64\\MCSkinVRM\\test_outputs\\UI_v1_1_20261030_175352_15231",
+  "eye_toggle": true,
+  "eye_apply": true,
+  "automatic_blender": true,
+  "check_indicator": true,
+  "roundtrip": true
+}
