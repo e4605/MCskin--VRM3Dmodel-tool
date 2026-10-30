@@ -1,0 +1,110 @@
+{
+  "converter_version": "1.2.0",
+  "supported_range": "4.2 <= Blender < 5.3",
+  "tested_versions": [
+    "4.2.23",
+    "4.5.15",
+    "5.2.3"
+  ],
+  "cases": [
+    {
+      "blender": "Blender 4.2.23",
+      "case": "slim_eyes_preview_wave",
+      "roundtrip": true,
+      "pixels": true,
+      "wave_motion_m": 0.10883018557350126,
+      "preview_size": [
+        512,
+        640
+      ]
+    },
+    {
+      "blender": "Blender 4.2.23",
+      "case": "classic",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6532
+    },
+    {
+      "blender": "Blender 4.2.23",
+      "case": "legacy",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6528
+    },
+    {
+      "blender": "Blender 4.2.23",
+      "case": "hd",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 26128
+    },
+    {
+      "blender": "Blender 4.5.15",
+      "case": "slim_eyes_preview_wave",
+      "roundtrip": true,
+      "pixels": true,
+      "wave_motion_m": 0.10883018557350126,
+      "preview_size": [
+        800,
+        1000
+      ]
+    },
+    {
+      "blender": "Blender 4.5.15",
+      "case": "classic",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6532
+    },
+    {
+      "blender": "Blender 4.5.15",
+      "case": "legacy",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6528
+    },
+    {
+      "blender": "Blender 4.5.15",
+      "case": "hd",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 26128
+    },
+    {
+      "blender": "Blender 5.2.3",
+      "case": "slim_eyes_preview_wave",
+      "roundtrip": true,
+      "pixels": true,
+      "wave_motion_m": 0.10883018557350126,
+      "preview_size": [
+        1024,
+        1280
+      ]
+    },
+    {
+      "blender": "Blender 5.2.3",
+      "case": "classic",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6532
+    },
+    {
+      "blender": "Blender 5.2.3",
+      "case": "legacy",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 6528
+    },
+    {
+      "blender": "Blender 5.2.3",
+      "case": "hd",
+      "roundtrip": true,
+      "pixels": true,
+      "vertices": 26128
+    }
+  ],
+  "all_passed": true,
+  "unit_tests": 21,
+  "livehime_runtime_tested": false
+}

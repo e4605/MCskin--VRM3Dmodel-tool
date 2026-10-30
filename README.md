@@ -1,44 +1,63 @@
-# MC Skin → VRM 1.1.1
+# MC Skin → VRM 1.2.0
 
-把 Minecraft 皮肤转换为带骨骼的 VRM 0.x 模型，同时输出可编辑的 Blender 工程。支持 Windows x64，需要本机安装 Blender 5.2。
+将 Minecraft 皮肤转换为带骨骼的 VRM 0.x 模型，同时输出可编辑的 Blender 工程。**Windows x64，本地运行，不新增嘴巴。**
 
-## 下载
+## 下载与启动
 
-- **[下载 Windows 完整工具包](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.1-Windows-x64.zip)**
-- [下载完整源码](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.1.1-Source.zip)
-- [SHA-256 校验文件](SHA256SUMS.txt)
+- **[下载 Windows 完整工具包](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.2.0-Windows-x64.zip)**
+- [下载完整源码](https://github.com/e4605/MCskin--VRM3Dmodel-tool/raw/refs/heads/main/MCSkinVRM-v1.2.0-Source.zip)
+- [SHA-256 校验文件](SHA256SUMS.txt) · [更新记录](CHANGELOG.md) · [使用说明](使用说明.md)
 
-完整解压 Windows 工具包后，运行 `MCSkinVRM.exe`。必须保留同目录的 `_internal` 文件夹。请使用上面的完整包下载链接；单独的 EXE 缺少运行依赖。
+完整解压工具包，保留同目录的 `_internal` 文件夹，再运行 `MCSkinVRM.exe`。便携包包含界面和插件依赖，无需另装 Python；本机仍需安装 Blender。
 
-## 1.1.1 修复
+## Blender 多版本适配
 
-修复所选输出目录被 Windows 拒绝访问时转换无法开始的问题。默认使用当前用户的推荐导出目录；所选目录无法创建或写入时，界面会尝试其他可写目录并显示实际保存位置。新增“推荐目录”按钮。
+支持 **Blender 4.2—5.2**。界面会检测程序的实际版本；通过“自动查找”填写路径，或在“高级选项 → Blender 检测”查看和切换版本。
 
-## 快速使用
+| 已实测版本 | 骨骼与像素检查 | 导出与重新导入 | 工程挥手动作 |
+| --- | --- | --- | --- |
+| 4.2.23 LTS | 通过 | 通过 | 通过 |
+| 4.5.15 LTS | 通过 | 通过 | 通过 |
+| 5.2.3 LTS | 通过 | 通过 | 通过 |
 
-1. 选择 MC 皮肤 PNG，确认普通手臂（Steve）或细手臂（Alex）。
-2. 点击“自动查找”，或选择 Blender 5.2 安装文件夹里的 `blender.exe`。这里需要程序文件路径，无需输入版本号。
-3. 需要眨眼时，点击“配置眼睛像素”，按①②标记画面右侧、左侧的眼睛；选中格子显示 √。qwq 示例可点击“一键示范”，再点击“应用并启用眨眼”。
-4. 点击“开始转换”，完成后打开输出目录，获取 `Avatar.vrm`、`Avatar.blend` 和可选的 `preview.png`。
+三个版本共完成 12 项实际转换，覆盖细手臂及眼睛表情、普通手臂、旧版、高清皮肤。区间内其他小版本未逐一测试；详见 [兼容测试记录](compatibility.json) 和 [研究依据](研究与兼容性.md)。
 
-## 功能与使用范围
+## 普通转换
 
-Windows 本地 MC 皮肤转 VRM 工具。启动与使用见 [使用说明](使用说明.md)，研究来源和验证边界见 [研究与兼容性](研究与兼容性.md)。
+1. 选择皮肤 PNG，确认普通／细手臂。
+2. 点击“自动查找”，或选中安装文件夹里的 `blender.exe`；不需要输入版本号。
+3. 选择输出目录。遇到拒绝访问可点“推荐目录”，程序也会尝试其他可写目录并显示实际位置。
+4. 点击“开始转换”，完成后打开输出目录获取 `Avatar.vrm`、`Avatar.blend` 和预览图。
 
-- 中文桌面界面，导入皮肤并输出 VRM 0.x、打包贴图的 Blender 工程和可选预览图。
-- Steve / Alex、旧版镜像补全、64 / 128 / 256 宽皮肤、透明第二层。
-- 不新增嘴巴或口型。可手动选眼睛制作眨眼与视线。
-- 51 项人形骨骼映射，含双手手指。每次导出检查实际文件并重新导入验证。
-- 使用本机 Blender 5.2；发布包自带界面依赖与 VRM 插件，无需另装 Python。
+需要眨眼时，先点击“配置眼睛像素”，按画面左、右侧分别点选；所选格子显示 √。只有匹配 qwq 正脸时才启用一键示范，避免把示例坐标套到其他皮肤上。
 
-模型带手臂、肘部和手腕骨骼，可在 Blender 或支持相应骨骼驱动的软件中制作动作。保留 MC 方块手；附加的手指骨骼用于结构兼容，不提供独立五指蒙皮或实时手部追踪。
+## 高级选项
 
-已根据此前排查加入直播姬手指骨骼兼容处理，并检查导出结构与 Blender 重新导入结果。**直播姬内实际加载与推流尚未验证，不承诺所有版本可直接导入。**
+主界面只保留常用操作；以下功能集中放在独立的“高级选项”窗口：
 
-## 源码
+- **批量转换**：选择多张 PNG 或一个文件夹，逐个建模；单张失败继续处理，输出结果报告，支持取消。每批最多 200 张，默认静态脸。
+- **预览质量**：快速 512×640、标准 800×1000、高清 1024×1280。
+- **三视图**：额外输出正面、侧面、背面 PNG。
+- **挥手演示**：通过真实手臂、肘部、手腕骨骼生成动作，保存在 Blender 工程中；VRM 保持标准静止姿态。
+- **导出选择**：保留工程或仅导出 VRM。
+- **更多设置**：作者、身高、不透明外层处理、单次超时、Blender 扫描与版本切换。
 
-下载源码 ZIP 并完整解压后，可查看 `app.py`、`cli.py`、`mcvrm`、Blender 后端及附带的 VRM 插件源码。源码安装方式和测试命令见使用说明。
+## 格式与边界
 
-源代码入口为 `app.py`；批处理可使用 `cli.py`。详见中文说明中的命令行和测试命令。
+支持 Steve / Alex、64 / 128 / 256 像素宽 PNG、对应旧版 2:1 格式、透明第二层。高清子像素保留，使用最近邻纹理。模型保留 MC 方块手，附加手指骨骼用于结构兼容，不提供独立五指蒙皮或实时手部追踪。
 
-原始工具代码为 MIT 许可；第三方软件和用户提供的示例皮肤分别适用自身授权，见 [第三方说明](THIRD_PARTY_NOTICES.md)。
+不新增嘴部几何或口型；原皮肤画有嘴巴时会保留原像素。已加入此前排查得到的直播姬手指骨骼兼容处理，**直播姬实际加载与推流尚未验证**，不能替代目标软件实测。
+
+## 源码与验证
+
+完整解压源码 ZIP，入口为 `app.py` 和 `cli.py`。安装 `requirements.txt` 后可运行界面或命令行；构建便携版还需 `requirements-build.txt`。
+
+```powershell
+python app.py
+python cli.py skin.png --output exports --blender "D:\Blender\blender.exe"
+python cli.py --batch skins --output exports --no-preview --no-blend
+python cli.py skin.png --output exports --views --wave-demo
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+原始工具代码采用 MIT 许可，第三方组件与示例皮肤适用各自授权，见 [第三方说明](THIRD_PARTY_NOTICES.md)。

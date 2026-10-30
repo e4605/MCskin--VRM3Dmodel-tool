@@ -13,4 +13,4 @@ MCSkinVRM's original application and worker code are licensed under the accompan
 
 Minecraft is a trademark of Mojang/Microsoft. This is an independent utility, without affiliation or endorsement. MC layout references: https://github.com/bs-community/skinview3d and https://github.com/bs-community/skinview-utils .
 
-The bundled `qwq.png` is the user's supplied local skin, included solely as the example for this delivery. No ownership or redistribution rights to that skin are granted by the tool's MIT license. Model metadata is a configurable declaration; users must have appropriate rights to their skins.
+The bundled `qwq.png` is supplied by the project owner as a demonstration skin. It is not covered by the application source license. No ownership or redistribution rights to that skin are granted by the tool's MIT license. Model metadata is a configurable declaration; users must have appropriate rights to their skins.
